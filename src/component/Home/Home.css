@@ -1,0 +1,81 @@
+.banner{
+    background-image: linear-gradient(to right,#635dc0,#3027ae);
+    height: 100vmin;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.banner > p {
+    font-size: 40px;
+    
+}
+
+.banner > h1 {
+    margin: 5vmax;
+    font-family:'Courier New', Courier, monospace;
+    
+}
+
+.banner > a >button {
+   background-color: wheat;
+   color: black;
+   font-size:large;
+   padding: 3px;
+   border-radius: 5px;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: start;
+   transition: var(--transition);
+   border:1px solid transparent;
+}
+
+.banner > a >button:hover{
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+.banner::after{
+    content: "";
+    width: 100vw;
+    height: 100vmin;
+    background-color: white;
+    position: absolute;
+    top:0%;
+    left:0%;
+    clip-path: polygon(0 100%, 100% 72%, 100% 100%);
+    max-width: 100%;
+} 
+
+.products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.products > h2{
+    text-align: center;
+    color: black;
+    border-bottom: 1px solid black;
+    width: 30vmax;
+    padding: 1vmax;
+    margin: 5vmax auto;
+}
+ 
+
+.product__list {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:1rem;
+    width: 80%;
+    
+}
+
+@media screen and(max-width:600px){
+
+}

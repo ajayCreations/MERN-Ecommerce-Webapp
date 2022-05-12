@@ -1,0 +1,43 @@
+.product__card{
+    padding: 0.4rem;
+    border: 1px solid transparent;
+    width: fit-content;
+    height: 40vh;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 10px rgb(222, 218, 218);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product__card:hover{
+    box-shadow: 0 0 20px rgb(151, 147, 147);
+}
+
+.productCard {
+    text-decoration: none;
+    color: black;
+   
+}
+
+.productCard > div > span{
+    font-size: small;
+    color: gray;
+
+}
+
+.productCard > span{ 
+    font-weight: 500;
+}
+
+.productCard > img{
+    width: 150px;
+    height: 200px;
+    
+}
+
+@media screen and (max-width : 600px){
+    
+}
