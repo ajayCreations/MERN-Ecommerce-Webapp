@@ -12,3 +12,4 @@ Building ecommerce web-app with all functionality. Like :
 * Delivery status 
 * Order Track 
 * and much more...
+* --> FrontEnd & BackEnd files are in branches frontEnd & Master
