@@ -1,0 +1,352 @@
+.product_details_one        {
+   background-color:white;
+   margin-top: 4.5rem;
+   padding: 1rem;
+
+}
+.product_top_section{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 0.5px solid rgb(177, 177, 177);
+}
+
+.image_slides{
+    background-color:white;
+    width: 50px;
+    position: relative;
+    height: fit-content;
+}
+
+.product_images_mini{
+    margin-top: 10px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
+.product_images_small{
+    width: 50px;
+    height: 60px;
+    object-fit: contain;
+    padding: 2px;
+
+}
+
+
+.product_images_mini:hover{
+    box-shadow: 0 0 20px rgb(255, 247, 0);
+    
+}
+/* ---------------------Mini carosul Ends ----------------- */
+
+
+/* -------------------------Product Image-------------------------- */
+
+.product_image{
+    background-color: white;
+    width: 420px;
+    height: 420px;
+    text-align: center;
+
+}
+
+.product_focus_image{
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+/* ----------------- Product Description ----------- */
+
+.product_details_1{
+    background-color:white;
+    width: 720px;
+    padding: 10px;
+    word-spacing: 2px;
+    
+}
+
+.product_details_name{
+    color: black;
+    font-size: 20px;
+   
+}
+
+.product_price_single{
+    display: flex;
+    align-items: center;
+}
+
+.single_product_price{
+    color: black;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.total_reviews{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: blue;
+    width: 150px;
+    justify-content: space-between;
+}
+.emi{
+    color: black;
+    margin-top: 10px;
+}
+
+
+
+/* ---------------------- Product Buy ----------------- */
+
+.product_buy{
+    background-color:white;
+    height: fit-content;
+    padding: 10px;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    
+}
+
+.buy_button2{
+    width: 90%;
+    padding: 10px;
+    background-color:orange;
+    box-shadow: 0 0  10px rgb(0,0,0,0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.buy_button2:hover{
+    background-color: rgb(204, 133, 0);
+}
+
+.amazon_fulfill2{
+    width: 70px;
+    height: 28px;
+    object-fit: contain;
+
+}
+
+.product_stock_2{
+    margin: 5px;
+}
+
+.product_buttons{
+    text-align: center;
+}
+
+
+/* ---------------------End---------------------------------------------- */
+
+
+/* ----------------- Amazon Featuers ----------------*/
+.amazon_features_icons{
+    display: flex;
+    color:blue;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 0.5px solid gainsboro;
+    margin: 10px;
+}
+
+.amazon_f1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.amazon_f1:hover{
+    color: orange;
+
+}
+
+.icons_pics_a1{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+
+.about_this_item{
+    color: black;
+   
+}
+
+
+
+.about_this_item_1{
+    margin: 10px;
+}
+
+
+.single_product_heading{
+    color: black;
+    font-size: 25px;
+}
+
+.product_reviews{
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 0.5px solid rgb(161, 161, 161);
+    width: 100%;
+}
+
+.writing_product_review{
+    color: black;
+}
+
+/* ------------- Rating and Reviews ---------- */
+
+.single_product_1{
+    display: flex;
+    color: black;
+    align-items: center;
+}
+
+.rrrs{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.product_reviews_total1{
+    color:gray;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.single_product_reviews{
+    width: 800px;
+    height: fit-content;
+}
+
+.product_review2{
+    display: flex;
+    gap: 50px;
+}
+
+.user_pics_r{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+.about_review_user{
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+
+.review_comment{
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 10; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* -------------------------------------------------- */
+/* --------------Give Ratings-------------------- */
+
+.writing_product_review{
+    width: 80%;
+    padding: 10px;
+    /* border-radius: 5px; */
+    /* border: 0.5px solid rgb(174, 174, 174); */
+    margin-bottom: 10px;
+}
+
+
+.text_input_review{
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 0.5px solid gray;   
+}
+
+
+.one_review{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+
+
+/* --------------------------------------------------- */
+
+/* ------------REview Bars -------------------------------- */
+
+.ratings_graph{
+  
+    padding: 5px;
+    width: 300px;
+}
+
+.rating_star1{
+    font-size: 17px;
+    color: blue;
+    margin-right: 10px;
+}
+.ratings_star2{
+    margin-left: 5px;
+    color: blue;
+}
+
+
+
+
+@media screen and (max-width: 600px){
+
+
+    .product__Details{
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        padding: 3vmax;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        grid-template-columns:2fr 1fr;
+       
+        margin-top: 2vh;
+        color: black;
+        /* background-color: gray; */
+    
+    }
+
+    .details__right{
+        border-color: transparent;
+        width: 85vw;
+        /* background-color: yellow; */
+        padding: 0.5rem;
+        position: relative;
+        height: 50vh;
+    }
+
+    .product__images{
+        width: 40vh;
+        height: 40vh;
+        border-radius: 3%;
+    }
+    .submitReview{
+        position:absolute;
+        bottom: 10px;
+        width: 85%;
+        margin-left: 5%;
+    }
+    
+}

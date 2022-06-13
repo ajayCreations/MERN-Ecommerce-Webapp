@@ -1,67 +1,86 @@
-import React from 'react'
-import { CgScrollV } from 'react-icons/cg'
+import React, { useEffect, useState } from 'react'
 import './Home.css'
-import Product from './Products.jsx'
 import MetaData from '../MetaData'
-import { getProduct } from '../../redux/actions/productAction'
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from 'react'
+import Loader from '../layout/loader/Loader'
+import banner from '../../assets/images/amazon_banner.png';
+import ProductComponent from '../Product/ProductComponent'
+import SlideCard from '../layout/cards/SlideCard'
+import { ProductAction } from '../../redux/actions/ProductActions';
+import { useDispatch,useSelector } from 'react-redux';
+import  axios  from 'axios';
 
 
-const product={
-  name:"Mac-book pro",
-  _id:12,
-  images:[{url:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1026&q=80'}],
-  price:"₹92,000"
-}
+const Home =()=>{
 
-const Home = () => {
+  const dispatch=useDispatch();
+  const [loading,setLoading] = useState(true);
+  const [products,setProduct] = useState([]);
 
+   const GettingProducts = async()=> {
+    const {data} = await axios.get('/api/v1/products')
 
-  const dispatch = useDispatch();
+    dispatch({
+      type:"GetAllProducts",
+      payload:data.products
+    });
+    dispatch({
+      type:"GoToAuth",
+      payload:true
+    })
+    setLoading((state)=>state=false);
+    setProduct((value)=>value=data.products);
+   
+  }
+
   
-  React.useEffect(() => {
-   return dispatch(getProduct());
-  }, [dispatch])
-  
+
+  useEffect(()=>{
+    let load = true;
+    if(load){
+      GettingProducts();
+    }
+    return function cleanup(){
+      load = false;
+    }
+
+  },[])
+
+  if (loading) return <Loader />;
+
   return (
-    <>
-      <MetaData title="Z-Comm"/>
-      <section className="banner">
-        <p>Welcome to Z-Comm</p>
-        <h1>Find Amazing Products Below</h1>
+    <section className="home">
+       <MetaData title="Amazon" />
+       
+      <img src={banner} alt="banner" className='home__banner' />
 
-        <a href="#showProducts">
-          <button>
-            Scroll <CgScrollV />
-          </button>
-        </a>
+   
+      <div className="home_row">
+        <ProductComponent product={products[0]}/>
+        <ProductComponent product={products[1]}/>
+        <ProductComponent product={products[2]}/>
+
+      </div>
+
+      <div className="top_slider">
+      <h1 style={{color:"black"}}>Top picks for you </h1>
+       <SlideCard product={false} categoery='Laptops'/>
+      </div>
+
+      <div className="home_row">
+        <ProductComponent product={products[3]}/>
+        <ProductComponent product={products[4]}/>
+        <ProductComponent product={products[4]}/>
+
+      </div>
+
+      <div className="top_slider">
+      <h1 style={{color:"black"}}>Products you might like </h1>
+       <SlideCard product={products}/>
+      </div>
 
 
-
-
-
-      </section>
-
-      <section className="products" id="showProducts">
-
-        <h2>Featur Products</h2>
-        <div className="product__list">
-
-        <Product product={product}/>
-        <Product product={product}/>
-        <Product product={product}/>
-        <Product product={product}/>
-        <Product product={product}/>
-        <Product product={product}/>
-        <Product product={product}/>
-        <Product product={product}/>
-
-        </div>
-
-      </section>
-    </>
+    </section>
   )
 }
 
-export default Home
+export default Home;

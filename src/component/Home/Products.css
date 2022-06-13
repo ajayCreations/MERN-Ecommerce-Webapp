@@ -2,7 +2,7 @@
     padding: 0.4rem;
     border: 1px solid transparent;
     width: fit-content;
-    height: 40vh;
+    height: 45vh;
     border-radius: 0.2rem;
     box-shadow: 0 0 10px rgb(222, 218, 218);
     transition: var(--transition);

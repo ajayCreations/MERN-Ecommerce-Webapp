@@ -1,0 +1,174 @@
+
+.auth{
+    background-color:white;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    color: rgb(33, 33, 33);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 21;
+
+}
+
+.top_logo{
+    width: 110px;
+    height: 40px;
+}
+
+.signin{
+    border:1px solid gray;
+    width: 400px;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.show{
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: rgb(31, 31, 255);
+    cursor: pointer;
+}
+.formInput{
+    border:0.5px solid gray;
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+   
+}
+
+.formInput:focus{
+    box-shadow: 0 0 5px rgb(255, 159, 49);
+}
+
+.submit{
+    padding: 10px;
+    background-image: linear-gradient(rgb(254, 219, 154),rgb(254, 187, 62),orange);
+    width: 100%;
+    border-radius: 5px;
+    border:0.5px solid gray;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.register{
+    
+    padding: 10px;
+    background-image: linear-gradient(rgb(255, 255, 255),rgb(238, 238, 238),rgb(227, 227, 227));
+    width: 100%;
+    border-radius: 5px;
+    border:0.5px solid gray;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.register_btn{
+    width: 400px;
+}
+
+.sign_up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    border-bottom: 1.5px solid gray;
+    
+}
+
+.new{
+    position: relative;
+}
+.new::before{
+   content:"";
+    width: 140px;
+    height: 1.5px;
+    background-color:gray;
+    display: block;
+    left:110%;
+    top: 50%;
+    position: absolute;
+}
+
+.new::after{
+    content:"";
+     width: 140px;
+     height: 1.5px;
+     background-color:gray;
+     display: block;
+     right: 110%;
+     top: 50%;
+     position: absolute;
+ }
+
+ .help{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 300px;
+  
+     
+ }
+
+ .help_list{
+     display: flex;
+     gap:20px;
+     margin-bottom: 10px;
+ }
+
+ .go_back{
+     margin-top: 20px;
+
+ }
+
+ .forgot_section{
+     display: flex;
+     justify-content:space-between;
+     margin-top: 10px;
+ }
+
+.profile_image_heading{
+    margin-bottom: 10px;
+}
+
+.select_image{
+    padding: 5px;
+    border: 0.5px solid gray;
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+.profile_avatar{
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.avatar_preview{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-left: 130px;
+}
+
+
+.forgot_pass{
+    background-color: aqua;
+}
+
+.forgot_lmsg{
+    font-size: 20px;
+    margin-top: -10px;
+}

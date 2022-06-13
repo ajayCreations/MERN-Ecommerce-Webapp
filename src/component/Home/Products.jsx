@@ -3,27 +3,34 @@ import ReactStars from 'react-rating-stars-component';
 import { Link, Outlet } from "react-router-dom";
 import './Products.css'
 
-const options = {
-    edit: false,
-    color: "rgba(20,20,20,0.1)",
-    activeColor: "tomato",
-    value:4.5,
-    isHalf:true,
-    size:window.innerWidth < 600 ? 15 : 18
 
-}
 
 const Product = ({ product }) => {
+
+    const options = {
+        edit: false,
+        color: "rgba(20,20,20,0.1)",
+        activeColor: "tomato",
+        value: product.ratings,
+        isHalf: true,
+        size: window.innerWidth < 600 ? 15 : 18
+
+    }
+
+
+    
+
     return (
         <div className='product__card'>
-            <Link className='productCard' to={product._id}>
+            <Link className='productCard' to={`${product._id}`}>
                 <img src={product.images[0].url} alt={product.name} />
-                <p>{product.name} </p>
+                <h4>{product.name}</h4>
+                <p>{product.description} </p>
 
                 <div>
-                    <ReactStars {...options} /> <span>(256 Reviews)</span>
+                    <ReactStars {...options} /> <span>({product.numOfReviews || 0} Reviews)</span>
                 </div>
-                <span>{product.price}</span>
+                <span>{`₹${product.price}`}</span>
 
 
 

@@ -1,0 +1,155 @@
+.cart_one{
+    background-color:rgb(236, 236, 236);
+    margin-top: 4.5rem;
+    padding: 2rem;
+    color: black;
+
+}
+
+
+
+.cart_above{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+
+
+.cart_products{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cart_style{
+    background-color:white;
+    padding: 1.5rem;
+   
+}
+
+.cart_section{
+    width: 840px;
+}
+
+
+/* -------- Card Items -------------------------- */
+
+.cart_items{
+    display: flex;
+    flex-direction:space-between;
+    padding: 10px;
+    border-top: 1px solid gray;
+
+}
+
+
+.cart_price{
+    width: 10%;
+}
+
+.cart_image{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.cart_item_details{
+    width: 50%;
+    margin-right: 20%;
+}
+
+.cart_item_names{
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
+  
+}
+
+.freeShip{
+    color: gray;
+}
+
+.amazon_fulfill{
+    width: 60px;
+    height: 18px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+}
+
+/* ------For Product Checkout ------------ */
+
+.cart_checkout{
+    width: fit-content;
+    height: 50vh;
+}
+
+.free_bar{
+    color: green;
+    font-size: 15px;
+}
+
+.free_bar_no{
+    color: red;
+    font-size: 15px;
+}
+
+.subtotal{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.total_price{
+    font-weight: 600;
+}
+
+
+.buy_button{
+    width: 90%;
+    padding: 10px;
+    background-color:gold;
+    box-shadow: 0 0  10px rgb(0,0,0,0.2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.buy_button:hover{
+    background-color: rgb(234, 199, 0);
+}
+
+
+
+/* ----------------- for carosule  */
+.cart_slider_heading{
+    color: black;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+
+
+
+/* --------------------------------- screen width  */
+
+@media screen and (max-width:600px){
+
+    .cart_products{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cart_image{
+        width: 100px;
+        height: 100px;
+    }
+    
+    
+}

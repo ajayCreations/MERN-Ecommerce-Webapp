@@ -2,65 +2,155 @@
 nav {
     background: black;
     width: 100vw;
-    height: 5rem;
+    height: 4.5rem;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 10;
+
+    
   }
-  
-  .window-scroll {
-    background: var(--color-primary);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+  .amazon_logo{
+    width: 150px;
+    height: 50px;
+    padding: 0.2rem;
   }
-  
-  .nav_container {
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
+
+  .amazon_logo:hover{
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .logo_header{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content:center;
     align-items: center;
+    padding: 1rem;
   }
-  
-  nav button {
-    display: none;
+
+  .left_options{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
   }
-  
-  .nav__menu  {
+
+
+
+  /* --------------Search Box --------------------- */
+  .search_box{
     display: flex;
-    gap: 4rem;
+    justify-content: center;
     align-items: center;
-  
-  }
-  
-  .nav__menu a {
-    font-size: 1.1rem;
-    color: wheat;
-    transition: var(--transition);
-  }
-  
-  .nav__menu a:hover {
-    color: white;
+    margin-top: -10px;
   }
 
-.nav__icons{
+  #search{
+    width: 85%;
+    height: 50%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 20px;
+
+    
+  }
+
+  #search:focus{
+    border: 3px solid yellow;
+  }
+
+  .search_logo{
+    color: black;
+    font-size: 20px;
+    
+  }
+
+  .search_logo_box{
+    background-color:orange;
+    height: 40px;
+    width: 40px;
+    margin-left: -40px;
+    border-right: 5px;
+    border-bottom: 5px;
     display: flex;
-    gap: 2rem;
+    justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-}
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search_logo_box:hover{
+    background-color: rgb(210, 136, 0);
+  }
+  
 
-.nav__icons a{
-    color: white;
-}
-.window-scroll {
-    background: var(--color-primary);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+
+
+  /* ------------------------ left side  */
+   
+  .sign_in,.return_order{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    text-align: center;
   }
 
-
-  .click__buttons{
-    background: transparent;
-    font-size: 1.2rem;
+  .its_name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    width: 120px;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  
+  
+     .sign_in:hover{
+      border: 1px solid white;
+      cursor: pointer;
+      border-radius: 5px;
     }
+
+      .return_order:hover{
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+
+      .shop{
+        font-size: 20px;
+      }
+      .shopping_cart{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: white;
+        /* padding: 3px; */
+
+      }
+
+      .shopping_cart:hover{
+        border: 1px solid white;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    
+      .cart_itemss{
+        font-size: 16px;
+      }
+
+
+
+
+
+
 
   @media screen and (max-width: 600px) {
       .container{

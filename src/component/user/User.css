@@ -1,0 +1,61 @@
+.userProfile{
+    width: 100vw;
+    margin-top: 4.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-back-default);
+
+}
+
+.mainSection{
+    width: 80%;
+    align-self: center;
+    padding-bottom: 20px;
+}
+
+
+.uperSection{
+    background-color:var(--color-back);
+    height: 280px;
+}
+
+.user_one{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: black;
+}
+
+.user_pic{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: white;
+    padding: 5px;
+    margin-top: -50px;
+    margin-left: 25px;
+}
+
+.profile_name{
+    font-size: 30px;
+}
+
+.profile_email{
+    font-size: 18x;
+    margin-top: 5px;
+    
+}
+
+
+.logout_btn{
+    background-color:orange;
+    padding: 0.5rem;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 8%;
+    margin-top: 10px;
+}
+
+

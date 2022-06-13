@@ -1,0 +1,119 @@
+.productall_list_main{
+    margin-top: 4.5rem;
+    padding-top: 1rem;
+}
+
+.upper_section{
+    display: flex;
+
+    
+}
+
+.products_filters{
+    padding: 1rem;
+    color:black;
+    width: fit-content;    
+}
+
+.products_filter_heading{
+    width: 220px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.all_category_a1{
+   cursor: pointer;   
+}
+
+.a1_name{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+.a1_name:hover{
+    color: orange;
+}
+
+
+/* --------------------Product List------------------- */
+
+.search_item{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 900px;
+    color:black;
+    box-shadow: 0 0 0.5px rgb(0,0,1);
+    cursor: pointer;
+}
+
+.search_item_second{
+    padding: 1rem;
+}
+
+.search_side{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+.search_item_name{
+    color: black;
+    font-size: 18px;
+}
+
+.list_image1{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+.p_price{
+    font-size: 20px;
+}
+
+/* ---------------Pagination Box------------------- */
+
+.middle_Section1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+.middle_section{
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 0 1px rgb(0,0,1);
+    border-radius: 5px;
+
+}
+
+.navbutton{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.prevPage{
+    padding-right: 15px;
+    border-right: 0.5px solid black;
+}
+
+.curr_page{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nextPage{
+    padding-left: 15px;
+    border-left: 0.5px solid black;
+}
+

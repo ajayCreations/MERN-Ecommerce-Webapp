@@ -1,0 +1,57 @@
+.slide_card{
+    width: 250px;
+    /* height: 100%; */
+    padding: 10px;
+    color:blue;
+    margin-left: 10px;
+}
+
+.slide_card:hover{
+    color:orange;
+    cursor: pointer;
+}
+
+.product_pics_space{
+    width: 100%;
+    height: 65%;
+    display: grid;
+    place-items: center;
+}
+.product_pics{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    
+}
+
+
+.product_ratings{
+    display: flex;
+    align-items: center;
+}
+
+.product_price{
+    color:black;
+    
+}
+
+.arrows{
+    font-size: 30px;
+    color: black;
+    width: 40px;
+    height: 100px;
+    z-index: 2;
+    cursor: pointer;
+    background-color:white;
+    border-radius: 5px;
+    position: absolute;
+    top:30%;
+    padding:5px;
+}
+
+
+.navigation_arrows_right{
+    position: absolute;
+    top:30%;
+    right: 0;
+}

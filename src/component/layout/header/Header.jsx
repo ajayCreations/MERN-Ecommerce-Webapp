@@ -1,66 +1,85 @@
 import React, { useState } from 'react'
-import {
-  AiOutlineClose,
-  AiOutlineMenu,
-  AiOutlineSearch,
-  AiOutlineShoppingCart,
-  AiOutlineUser
-} from 'react-icons/ai'
-import { Link, Outlet } from 'react-router-dom'
-import './Header.css'
+import { Link} from 'react-router-dom'
+import './Header.css';
+import amazonlogo from '../../../assets/images/amazon_logo.png';
 
+import {GoSearch} from 'react-icons/go'
+import {FiShoppingCart} from 'react-icons/fi'
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
+const Header = () =>{
 
-const Header = () => {
-  const [click, setClick] = useState(true);
+  const dispatch = useDispatch();
+  const totalItems = useSelector(state=>state.Product.cartProducts.length);
+  const {name}=useSelector(state=>state.Auth.user);
+  console.log('Getting in header',name)
+  const [keyword,setKeyword]= useState('phone');
 
-  const navitems = () => {
-
-    return (
-      <>
-        <ul className="nav__menu">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/product">Product</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/about">About</Link></li>
-        </ul>
-        <Outlet />
-      </>
-    )
+  function OnLoginPage(){
+    dispatch({
+      type:"GoToAuth",
+      payload:false
+    })
   }
 
 
   return (
     <nav>
-      <div className="container nav_container">
-        <a href="/">
-          <h3 className='logo'>Z-Comm</h3>
-        </a>
+
+      <div className="logo_header">
+
+          <Link to={'/'}>
+          <img src={amazonlogo} alt="amazon-logo" className='amazon_logo'/>
+          </Link>
+
+          <div className='search_box'>
+            <input type="search" name="search" id='search' onChange={(e)=>setKeyword(()=>e.target.value)}  />
+            <Link to={`/products/${keyword}`} >
+            <span className='search_logo_box'>
+            <GoSearch className='search_logo'/>
+            </span>
+            </Link>
+          </div>
+
+          <div className="left_options">
+
+            <Link to={'/login'} onClick={()=>OnLoginPage()}>
+            <article className="sign_in">
+              <small>Hello</small>
+              <h3 className='its_name'>{name?name:"Sign in"}</h3>
+            </article>
+            </Link>
+
+            <Link to={'/orders'} >
+            <article className="return_order">
+              <small>Returns</small>
+              <h3>& Orders</h3>
+            </article>
+            </Link>
 
 
-        {/* {!click ? navitems() : null} */}
-        {navitems()}
+              <Link to={'/cart'}>
+            <article className="shopping_cart">
+            
+              <FiShoppingCart className='shop'/>
+              <span className="cart_itemss">
+                {totalItems}
+              <h4>Cart</h4> 
+              </span>
+              
+            </article>
+              </Link>
+
+          </div>
 
 
-        <ul className="nav__icons">
-          <li><a href="" className="search"><AiOutlineSearch /></a></li>
-          <li><a href="" className="cart"><AiOutlineShoppingCart /></a></li>
-          <li><a href="" className="user"><AiOutlineUser /></a></li>
-
-        </ul>
-
-        <span className='menu__buttons'>
-
-          <button
-            className="click__buttons"
-            onClick={() => setClick(click => !click)}
-          >{click ? (<AiOutlineMenu />) : (<AiOutlineClose />)}</button>
-        </span>
 
       </div>
+
 
     </nav>
   )
 }
 
-export default Header 
+export default Header

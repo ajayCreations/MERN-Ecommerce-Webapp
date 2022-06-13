@@ -1,3 +1,34 @@
+.home{
+    padding: 0;
+    margin-top: 10vh;
+    background-color:white;
+}
+
+.home > img {
+    width: 100%;
+    height: 100%;
+    resize: both;
+    mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0));
+    z-index: -1;
+    /* margin-bottom: -100px; */
+}
+
+.top_slider{
+    width: 95%;
+    resize: both;
+    margin-left: 2.5%;
+
+}
+
+.home_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
 .banner{
     background-image: linear-gradient(to right,#635dc0,#3027ae);
     height: 100vmin;
@@ -7,6 +38,7 @@
     justify-content: center;
     align-items: center;
     color:white;
+    margin-bottom: -100px;
 }
 
 .banner > p {
@@ -77,5 +109,9 @@
 }
 
 @media screen and(max-width:600px){
+
+    .home_row{
+       display: block;
+    }
 
 }
