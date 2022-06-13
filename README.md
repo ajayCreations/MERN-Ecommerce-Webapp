@@ -1,4 +1,4 @@
-# MERN-Ecommerce-Webapp
+# Amazone Clone using MERN
 Building ecommerce web-app with all functionality. Like : 
 * Authenticaion 
 * JWT / cookies 
